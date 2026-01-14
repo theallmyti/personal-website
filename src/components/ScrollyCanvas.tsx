@@ -47,7 +47,7 @@ export default function ScrollyCanvas() {
 
                     // Add base path for GitHub Pages or other subpath deployments
                     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-                    img.src = `${basePath}/sequence/frame_${indexStr}.png`;
+                    img.src = `${basePath}/sequence/frame_${indexStr}.webp`;
                     img.onload = () => {
                         loadedImages[i] = img;
                         resolve();
