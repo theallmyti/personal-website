@@ -45,7 +45,9 @@ export default function ScrollyCanvas() {
                     // This would make frontend loading robust.
                     // I WILL RENAME THE FILES IN PUBLIC/SEQUENCE FIRST for safety.
 
-                    img.src = `/sequence/frame_${indexStr}.png`;
+                    // Add base path for GitHub Pages
+                    const basePath = process.env.NODE_ENV === "production" ? "/personal-website" : "";
+                    img.src = `${basePath}/sequence/frame_${indexStr}.png`;
                     img.onload = () => {
                         loadedImages[i] = img;
                         resolve();
